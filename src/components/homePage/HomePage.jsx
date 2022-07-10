@@ -25,11 +25,25 @@ const HomePage = () => {
             },
           }}
         >
-          <Button sx={{ fontWeight: 700 }}>
+          <Button
+            sx={{ fontWeight: 700 }}
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/rodrigorabellino/",
+                "_blank"
+              )
+            }
+          >
             <LinkedIn />
             /RodrigoRabellino
           </Button>
-          <Button color="secondary" sx={{ fontWeight: 700 }}>
+          <Button
+            color="secondary"
+            sx={{ fontWeight: 700 }}
+            onClick={() =>
+              window.open("https://github.com/RodrigoRabellino", "_blank")
+            }
+          >
             <GitHub />
             /RodrigoRabellino
           </Button>
