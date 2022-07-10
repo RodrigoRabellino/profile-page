@@ -1,11 +1,22 @@
 import "./App.css";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import HomePage from "./components/homePage/HomePage";
 
 function App() {
+  const darkTheme = createTheme({
+    palette: {
+      mode: "dark",
+    },
+    typography: {
+      fontFamily: "Nunito",
+    },
+  });
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <div className="App">
+        <HomePage />
+      </div>
+    </ThemeProvider>
   );
 }
 
