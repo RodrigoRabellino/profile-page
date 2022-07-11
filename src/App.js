@@ -8,6 +8,7 @@ function App() {
     palette: {
       background: {
         default: "#242132",
+        paper: "#FEFCFF",
       },
       primary: {
         main: "#90caf9",
@@ -16,11 +17,11 @@ function App() {
         main: "#ce93d8",
       },
     },
-
     typography: {
-      fontFamily: "Nunito",
+      fontFamily: "Lexend Deca",
       allVariants: {
         color: "#FEFCFF",
+        accentColor: "#242132",
       },
     },
   });
