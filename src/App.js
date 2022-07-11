@@ -7,21 +7,22 @@ function App() {
   const darkTheme = createTheme({
     palette: {
       background: {
-        default: "#242132",
-        paper: "#FEFCFF",
+        default: "#e8f1ed",
+        paper: "#e8f1ed",
       },
       primary: {
-        main: "#90caf9",
+        main: "#dfebbf",
       },
       secondary: {
-        main: "#ce93d8",
+        main: "#e9d5d3",
       },
     },
+
     typography: {
       fontFamily: "Lexend Deca",
       allVariants: {
-        color: "#FEFCFF",
-        accentColor: "#242132",
+        color: "#3c4043",
+        accentColor: "#dfebbf",
       },
     },
   });
