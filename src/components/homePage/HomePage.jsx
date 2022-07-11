@@ -8,7 +8,7 @@ const HomePage = () => {
       fixed
     >
       <Box display="flex" flexDirection="column" sx={{ mx: "auto" }}>
-        <Typography fontSize="25px" fontWeight="700" sx={{ color: "#F2F4F5" }}>
+        <Typography fontSize="25px" fontWeight="700">
           Hello, this page is in development. See more:
         </Typography>
         <Box
