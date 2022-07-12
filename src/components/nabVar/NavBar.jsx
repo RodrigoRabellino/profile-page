@@ -1,6 +1,7 @@
 import {
   AppBar,
   Box,
+  Collapse,
   Container,
   IconButton,
   Stack,
@@ -14,8 +15,10 @@ import { useState } from "react";
 const NavBar = () => {
   const mq600 = useMediaQuery("(min-width:600px)");
   const [isScroll, setIsScroll] = useState(false);
+  const [openName, setOpenName] = useState(false);
   const onScrollPage = () => {
     setIsScroll(window.scrollY >= 80);
+    setOpenName(window.scrollY >= 300);
   };
   window.addEventListener("scroll", onScrollPage);
   return (
@@ -40,13 +43,47 @@ const NavBar = () => {
               marginX: 0,
             }}
           >
-            <Typography
-              variant="h6"
+            <Box
+              display="flex"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               sx={{ cursor: "pointer" }}
             >
-              Rodrigo Rabellino
-            </Typography>
+              <Collapse
+                in={openName}
+                orientation="horizontal"
+                collapsedSize={15}
+              >
+                <Typography
+                  overflow="hidden"
+                  variant="h6"
+                  sx={
+                    openName
+                      ? { transition: "", width: "7ch" }
+                      : { transition: "0.2s", width: "1ch" }
+                  }
+                >
+                  Rodrigo
+                </Typography>
+              </Collapse>
+              <Collapse
+                in={openName}
+                orientation="horizontal"
+                collapsedSize={15}
+              >
+                <Typography
+                  overflow="hidden"
+                  variant="h6"
+                  sx={
+                    openName
+                      ? { transition: "", width: "9ch" }
+                      : { transition: "0.2s", width: "1ch" }
+                  }
+                >
+                  Rabellino
+                </Typography>
+              </Collapse>
+            </Box>
+
             {mq600 ? (
               <NavBarItems />
             ) : (

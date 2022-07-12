@@ -14,7 +14,6 @@ import pythonLogo from "../../assets/icons/python2.svg";
 const About = () => {
   const handleDownloadCv = () => {
     const cvLink = process.env.REACT_APP_CV_LINK;
-    console.log(cvLink);
     window.open(cvLink, "_blank");
   };
 

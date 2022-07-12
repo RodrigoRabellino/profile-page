@@ -1,10 +1,11 @@
-import { Box } from "@mui/material";
+import { Box, Fade } from "@mui/material";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import MyProjects from "../myProjects/MyProjects";
 import NavBar from "../nabVar/NavBar";
+import bounceIn from "react-animations";
 
 const HomePage = () => {
   return (

@@ -1,13 +1,12 @@
-import {
-  Box,
-  Typography,
-  Paper,
-  useMediaQuery,
-  Container,
-} from "@mui/material";
+import { Box, Typography, useMediaQuery, Container } from "@mui/material";
+import "./header.css";
 
 const Header = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
+  const onScrollPage = () => {
+    console.log(window.scrollY);
+  };
+  window.addEventListener("scroll", onScrollPage);
   return (
     <Box
       display="flex"
@@ -40,7 +39,11 @@ const Header = () => {
           display={mediaQuery600 ? "flex" : "none"}
         >
           <img
-            style={{ width: "100%", objectFit: "cover" }}
+            className="image__profile"
+            style={{
+              width: "100%",
+              objectFit: "cover",
+            }}
             srcSet={require("../../assets/img/fotoCv1crop.jpg")}
             alt="Rodrigo Rabellino profile"
           />
