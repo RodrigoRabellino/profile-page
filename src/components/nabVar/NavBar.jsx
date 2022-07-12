@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <Box position="sticky" top="0" zIndex={900}>
       <Container>
-        <AppBar color="primary">
+        <AppBar elevation={0} color="background">
           <Toolbar>
             <Typography
               color="CaptionText"

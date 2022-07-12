@@ -1,4 +1,13 @@
-import { Card, CardHeader, CardMedia, Grid, Typography } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardHeader,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
 
 const MyProjects = () => {
   const projects = [
@@ -19,7 +28,7 @@ const MyProjects = () => {
     },
   ];
   return (
-    <>
+    <Container>
       <Typography variant="h4">My Projects</Typography>
       <Grid
         container
@@ -27,9 +36,9 @@ const MyProjects = () => {
         my="2rem"
         sx={{ justifyContent: "space-between" }}
       >
-        {projects.map((project) => {
+        {projects.map((project, i) => {
           return (
-            <Grid item lg="auto">
+            <Grid item lg="auto" key={i}>
               <Card
                 elevation={3}
                 sx={{
@@ -66,12 +75,18 @@ const MyProjects = () => {
                     </>
                   }
                 />
+                <CardActions
+                  sx={{ display: "flex", justifyContent: "space-around" }}
+                >
+                  <Button color="secondary">Live Demo</Button>
+                  <Button>View Code</Button>
+                </CardActions>
               </Card>
             </Grid>
           );
         })}
       </Grid>
-    </>
+    </Container>
   );
 };
 

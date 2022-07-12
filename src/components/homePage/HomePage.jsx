@@ -1,14 +1,18 @@
 import { Box, Container, Typography } from "@mui/material";
+import Header from "../header/Header";
 import MyProjects from "../myProjects/MyProjects";
 import NavBar from "../nabVar/NavBar";
 
 const HomePage = () => {
   return (
     <>
-      <NavBar />
-      <Container sx={{ height: "200vh", pt: "64px" }}>
-        <MyProjects />
-      </Container>
+      <main>
+        <NavBar />
+        <Box py="64px">
+          <Header />
+          <MyProjects />
+        </Box>
+      </main>
     </>
   );
 };

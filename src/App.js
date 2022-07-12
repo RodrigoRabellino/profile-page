@@ -8,7 +8,7 @@ function App() {
     palette: {
       background: {
         default: "#e8f1ed",
-        paper: "#e8f1ed",
+        paper: "#f8f9fa",
       },
       primary: {
         main: "#dfebbf",
