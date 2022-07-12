@@ -1,5 +1,7 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import About from "../about/About";
+import Contact from "../contact/Contact";
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import MyProjects from "../myProjects/MyProjects";
 import NavBar from "../nabVar/NavBar";
@@ -9,12 +11,14 @@ const HomePage = () => {
     <>
       <main>
         <NavBar />
-        <Box py="64px">
+        <Box>
           <Header />
           <MyProjects />
           <About />
+          <Contact />
         </Box>
       </main>
+      <Footer />
     </>
   );
 };

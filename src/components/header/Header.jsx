@@ -9,7 +9,13 @@ import {
 const Header = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
   return (
-    <Box display="flex" alignItems="center" py="3rem" bgcolor="#e3ffe6">
+    <Box
+      display="flex"
+      alignItems="center"
+      height="400px"
+      py="5rem"
+      bgcolor="#e3ffe6"
+    >
       <Container
         sx={{
           display: "flex",

@@ -38,15 +38,15 @@ const MyProjects = () => {
     },
     {
       name: "Profile Page",
-      image: require("../../assets/img/guitarrero-admin.png"),
+      image: require("../../assets/img/profilePage.png"),
       createdAt: "11/07/22",
-      gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-admin",
-      liveDemo: "#",
+      gitHubUrl: "https://github.com/RodrigoRabellino/profile-page",
+      liveDemo: "",
     },
   ];
 
   return (
-    <Box sx={{ py: "5rem" }}>
+    <Box sx={{ py: "5rem" }} id="myProjectSection">
       <Container>
         <Typography variant="h4" sx={{ pb: "2rem" }}>
           My Projects
@@ -62,7 +62,7 @@ const MyProjects = () => {
             return (
               <Grid item lg="auto" key={i}>
                 <Card
-                  elevation={1}
+                  elevation={0}
                   sx={{
                     width: "250px",
                     p: "5px",
@@ -109,6 +109,7 @@ const MyProjects = () => {
                       View Code
                     </Button>
                     <Button
+                      disabled={project.liveDemo === "" ? true : false}
                       variant="outlined"
                       onClick={() => window.open(project.liveDemo, "_blank")}
                     >
