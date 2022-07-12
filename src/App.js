@@ -11,13 +11,50 @@ function App() {
         paper: "#f8f9fa",
       },
       primary: {
-        main: "#dfebbf",
+        main: "#3c4043",
       },
       secondary: {
         main: "#e9d5d3",
       },
     },
-
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            padding: "5px 10px 5px 10px",
+            transition: "0.4s",
+            ":hover": {
+              transition: "0.4s",
+              borderRadius: "28px",
+              backgroundColor: "#3c4043",
+              color: "#e8f1ed",
+            },
+          },
+        },
+      },
+      MuiPaper: {
+        styleOverrides: {
+          elevation: 0,
+          root: {
+            borderRadius: "15px",
+          },
+        },
+      },
+      MuiCard: {
+        styleOverrides: {
+          root: {
+            backgroundColor: "#e8e3e4",
+            borderRadius: "15px",
+            transition: "0.4s",
+            ":hover": {
+              transition: "0.4s",
+              backgroundColor: "#e8f1ed",
+              boxShadow: "10px 10px 21px -4px rgba(0,0,0,0.36)",
+            },
+          },
+        },
+      },
+    },
     typography: {
       fontFamily: "Lexend Deca",
       allVariants: {

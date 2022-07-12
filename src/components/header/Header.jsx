@@ -1,29 +1,45 @@
-import { Box, Typography, Paper } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Paper,
+  useMediaQuery,
+  Container,
+} from "@mui/material";
 
 const Header = () => {
+  const mediaQuery600 = useMediaQuery("(min-width:600px)");
   return (
-    <Box
-      display="flex"
-      justifyContent="space-around"
-      alignItems="center"
-      py="2rem"
-    >
-      <Box sx={{ py: "3rem", background: "" }}>
-        <Typography variant="h2" fontWeight="600">
-          Rodrigo
-        </Typography>
-        <Typography variant="h2" fontWeight="600">
-          Rabellino
-        </Typography>
-        <Typography variant="h6">Fullstack Dev | Actor</Typography>
-      </Box>
-      <Box width="250px" borderRadius="50%" overflow="hidden">
-        <img
-          style={{ width: "100%", objectFit: "cover" }}
-          srcSet={require("../../assets/img/fotoCv1crop.jpg")}
-          alt="Rodrigo Rabellino profile"
-        />
-      </Box>
+    <Box display="flex" alignItems="center" py="3rem" bgcolor="#e3ffe6">
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Box py="3rem">
+          <Typography fontSize={{ sm: "75px", xs: "50px" }} fontWeight="600">
+            Rodrigo
+          </Typography>
+          <Typography fontSize={{ sm: "75px", xs: "50px" }} fontWeight="600">
+            Rabellino
+          </Typography>
+          <Typography variant="h6">Fullstack Dev | Actor</Typography>
+        </Box>
+        <Box
+          width="300px"
+          height="300px"
+          borderRadius="500px"
+          overflow="hidden"
+          display={mediaQuery600 ? "flex" : "none"}
+        >
+          <img
+            style={{ width: "100%", objectFit: "cover" }}
+            srcSet={require("../../assets/img/fotoCv1crop.jpg")}
+            alt="Rodrigo Rabellino profile"
+          />
+        </Box>
+      </Container>
     </Box>
   );
 };
