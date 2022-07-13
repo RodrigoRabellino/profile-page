@@ -95,9 +95,9 @@ const MySkills = () => {
         Skills
       </Typography>
       <Grid container spacing={2} display="flex" justifyContent="space-evenly">
-        {technologies.map((item) => {
+        {technologies.map((technology) => {
           return (
-            <Grid lg="auto" item>
+            <Grid lg="auto" item key={technology.name}>
               <Box
                 width="90px"
                 height="90px"
@@ -107,15 +107,15 @@ const MySkills = () => {
                 justifyContent="space-between"
               >
                 <img
-                  alt={item.name}
-                  srcset={item.image}
+                  alt={technology.name}
+                  srcSet={technology.image}
                   style={{
                     width: "64px",
                     height: "64px",
                     objectFit: "cover",
                   }}
                 />
-                <Typography>{item.name}</Typography>
+                <Typography>{technology.name}</Typography>
               </Box>
             </Grid>
           );
@@ -150,9 +150,9 @@ const Learning = () => {
         Learning/Interests
       </Typography>
       <Grid container spacing={2} display="flex" justifyContent="center">
-        {technologies.map((item) => {
+        {technologies.map((technology) => {
           return (
-            <Grid lg="auto" item>
+            <Grid lg="auto" item key={technology.name}>
               <Box
                 width="90px"
                 height="90px"
@@ -162,15 +162,15 @@ const Learning = () => {
                 justifyContent="space-between"
               >
                 <img
-                  alt={item.name}
-                  srcset={item.image}
+                  alt={technology.name}
+                  srcSet={technology.image}
                   style={{
                     width: "64px",
                     height: "64px",
                     objectFit: "cover",
                   }}
                 />
-                <Typography>{item.name}</Typography>
+                <Typography>{technology.name}</Typography>
               </Box>
             </Grid>
           );

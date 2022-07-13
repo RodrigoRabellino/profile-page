@@ -1,12 +1,8 @@
 import { Box, Typography, useMediaQuery, Container } from "@mui/material";
-import "./header.css";
 
 const Header = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
-  const onScrollPage = () => {
-    console.log(window.scrollY);
-  };
-  window.addEventListener("scroll", onScrollPage);
+
   return (
     <Box
       display="flex"

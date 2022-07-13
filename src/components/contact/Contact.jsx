@@ -11,7 +11,7 @@ import { useState } from "react";
 
 const Contact = () => {
   return (
-    <Box py="5rem" id="myContactSection">
+    <Box py="7rem" id="myContactSection">
       <Container>
         <Typography variant="h4" sx={{ pb: "2rem" }}>
           Contact
