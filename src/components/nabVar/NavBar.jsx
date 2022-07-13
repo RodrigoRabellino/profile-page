@@ -1,21 +1,24 @@
 import {
   AppBar,
   Box,
+  Collapse,
   Container,
   IconButton,
   Stack,
   Toolbar,
   Typography,
   useMediaQuery,
+  Menu,
 } from "@mui/material";
-import { Menu } from "@mui/icons-material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
 const NavBar = () => {
-  const mq600 = useMediaQuery("(min-width:600px)");
   const [isScroll, setIsScroll] = useState(false);
+  const [openName, setOpenName] = useState(false);
   const onScrollPage = () => {
     setIsScroll(window.scrollY >= 80);
+    setOpenName(window.scrollY >= 300);
   };
   window.addEventListener("scroll", onScrollPage);
   return (
@@ -40,20 +43,47 @@ const NavBar = () => {
               marginX: 0,
             }}
           >
-            <Typography
-              variant="h6"
+            <Box
+              display="flex"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               sx={{ cursor: "pointer" }}
             >
-              Rodrigo Rabellino
-            </Typography>
-            {mq600 ? (
-              <NavBarItems />
-            ) : (
-              <IconButton>
-                <Menu />
-              </IconButton>
-            )}
+              <Collapse
+                in={openName}
+                orientation="horizontal"
+                collapsedSize={15}
+              >
+                <Typography
+                  overflow="hidden"
+                  variant="h6"
+                  sx={
+                    openName
+                      ? { transition: "", width: "7ch" }
+                      : { transition: "0.2s", width: "1ch" }
+                  }
+                >
+                  Rodrigo
+                </Typography>
+              </Collapse>
+              <Collapse
+                in={openName}
+                orientation="horizontal"
+                collapsedSize={15}
+              >
+                <Typography
+                  overflow="hidden"
+                  variant="h6"
+                  sx={
+                    openName
+                      ? { transition: "", width: "9ch" }
+                      : { transition: "0.2s", width: "1ch" }
+                  }
+                >
+                  Rabellino
+                </Typography>
+              </Collapse>
+            </Box>
+            <MenuNavBar />
           </Toolbar>
         </Container>
       </AppBar>
@@ -61,15 +91,67 @@ const NavBar = () => {
   );
 };
 
-const NavBarItems = () => {
+const MenuNavBar = () => {
+  const mq600 = useMediaQuery("(min-width:600px)");
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
-    <Stack direction="row" justifyContent="space-between" spacing={2}>
+    <>
+      {mq600 ? (
+        <NavBarItems direction={"row"} />
+      ) : (
+        <>
+          <IconButton
+            id="menu-navbar-button"
+            aria-haspopup="true"
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            sx={{ p: "2rem" }}
+            id="menu-navbar"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+          >
+            <NavBarItems direction={"column"} handleClose={handleClose} />
+          </Menu>
+        </>
+      )}
+    </>
+  );
+};
+
+const NavBarItems = ({ direction, handleClose }) => {
+  return (
+    <Stack
+      direction={direction}
+      justifyContent="space-between"
+      spacing={2}
+      px={direction === "column" ? "2rem" : "0"}
+    >
       <Typography
+        noWrap
         sx={{ cursor: "pointer" }}
         onClick={() => {
-          document
-            .getElementById("myProjectSection")
-            .scrollIntoView({ behavior: "smooth" });
+          if (direction === "column") handleClose();
+          setTimeout(() => {
+            document
+              .getElementById("myProjectSection")
+              .scrollIntoView({ behavior: "smooth" });
+          }, 5);
         }}
       >
         My Projects
@@ -77,9 +159,12 @@ const NavBarItems = () => {
       <Typography
         sx={{ cursor: "pointer" }}
         onClick={() => {
-          document
-            .getElementById("myAboutSection")
-            .scrollIntoView({ behavior: "smooth" });
+          if (direction === "column") handleClose();
+          setTimeout(() => {
+            document
+              .getElementById("myAboutSection")
+              .scrollIntoView({ behavior: "smooth" });
+          }, 5);
         }}
       >
         About
@@ -87,9 +172,12 @@ const NavBarItems = () => {
       <Typography
         sx={{ cursor: "pointer" }}
         onClick={() => {
-          document
-            .getElementById("myContactSection")
-            .scrollIntoView({ behavior: "smooth" });
+          if (direction === "column") handleClose();
+          setTimeout(() => {
+            document
+              .getElementById("myContactSection")
+              .scrollIntoView({ behavior: "smooth" });
+          }, 5);
         }}
       >
         Contact
