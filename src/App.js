@@ -48,7 +48,7 @@ function App() {
             transition: "0.4s",
             ":hover": {
               transition: "0.4s",
-              backgroundColor: "#e8f1ed",
+              backgroundColor: "#e3ffe6",
             },
           },
         },

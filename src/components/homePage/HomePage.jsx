@@ -1,5 +1,5 @@
-import { Box, Fade } from "@mui/material";
-import { useEffect } from "react";
+import { Box, Fade, Slide } from "@mui/material";
+import { useEffect, useState } from "react";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
@@ -11,6 +11,7 @@ const HomePage = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+
   return (
     <>
       <main>

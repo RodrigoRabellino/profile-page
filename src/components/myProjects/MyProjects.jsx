@@ -6,52 +6,21 @@ import {
   CardHeader,
   CardMedia,
   Container,
-  Divider,
   Grid,
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { projects } from "../services/data";
 
 const MyProjects = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
-  const projects = [
-    {
-      name: "HackFlix",
-      image: require("../../assets/img/hackflix.png"),
-      createdAt: "12/12/12",
-      gitHubUrl: "https://github.com/RodrigoRabellino/hackflix",
-      liveDemo: "https://hackflix-rabellino.netlify.app/",
-    },
-    {
-      name: "Guitarrero",
-      image: require("../../assets/img/guitarrero-store.png"),
-      createdAt: "12/12/12",
-      gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-front",
-      liveDemo: "https://guitarrero.vercel.app/",
-    },
-    {
-      name: "Guitarrero Admin",
-      image: require("../../assets/img/guitarrero-admin.png"),
-      createdAt: "12/12/12",
-      gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-admin",
-      liveDemo: "https://guitarrero-admin.vercel.app/",
-    },
-    {
-      name: "Profile Page",
-      image: require("../../assets/img/profilePage.png"),
-      createdAt: "11/07/22",
-      gitHubUrl: "https://github.com/RodrigoRabellino/profile-page",
-      liveDemo: "",
-    },
-  ];
 
   return (
     <Box sx={{ py: "5rem" }} id="myProjectSection">
       <Container>
-        <Typography variant="h4" sx={{ pb: "2rem" }}>
+        <Typography variant="h4" sx={{ pb: "2rem" }} id="project__title">
           My Projects
         </Typography>
-
         <Grid
           container
           spacing={2}
@@ -82,7 +51,7 @@ const MyProjects = () => {
                     image={project.image}
                   />
                   <CardHeader
-                    sx={{ p: "0", px: "1rem" }}
+                    sx={{ p: "0", px: "0" }}
                     title={
                       <Typography
                         color="CaptionText"
@@ -101,7 +70,10 @@ const MyProjects = () => {
                     }
                   />
                   <CardActions
-                    sx={{ display: "flex", justifyContent: "space-around" }}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
                   >
                     <Button
                       onClick={() => window.open(project.gitHubUrl, "_blank")}
