@@ -1,7 +1,21 @@
-import { Box, Typography, useMediaQuery, Container } from "@mui/material";
+import {
+  Box,
+  Typography,
+  useMediaQuery,
+  Container,
+  Grow,
+  Fade,
+  Slide,
+} from "@mui/material";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
+  const [showImage, setShowImage] = useState(false);
+
+  useEffect(() => {
+    setShowImage(true);
+  }, []);
 
   return (
     <Box
@@ -18,32 +32,58 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        <Box py="3rem">
-          <Typography fontSize={{ sm: "75px", xs: "50px" }} fontWeight="600">
-            Rodrigo
-          </Typography>
-          <Typography fontSize={{ sm: "75px", xs: "50px" }} fontWeight="600">
-            Rabellino
-          </Typography>
-          <Typography variant="h6">Fullstack Dev | Actor</Typography>
+        <Box>
+          <Slide
+            in={showImage}
+            direction="right"
+            timeout={{ appear: 1000, enter: 1000, exit: 1000 }}
+          >
+            <Typography fontSize={{ sm: "75px", xs: "60px" }} fontWeight="600">
+              Rodrigo
+            </Typography>
+          </Slide>
+          <Slide
+            in={showImage}
+            direction="right"
+            timeout={{ appear: 1500, enter: 1500, exit: 1500 }}
+          >
+            <Typography fontSize={{ sm: "75px", xs: "60px" }} fontWeight="600">
+              Rabellino
+            </Typography>
+          </Slide>
+          <Slide
+            in={showImage}
+            direction="right"
+            timeout={{ appear: 2000, enter: 2000, exit: 2000 }}
+          >
+            <Typography fontSize="20px" ml="3px">
+              Fullstack Dev | Actor
+            </Typography>
+          </Slide>
         </Box>
-        <Box
-          width="300px"
-          height="300px"
-          borderRadius="500px"
-          overflow="hidden"
-          display={mediaQuery600 ? "flex" : "none"}
+
+        <Fade
+          in={showImage}
+          timeout={{ appear: 2000, enter: 2000, exit: 2000 }}
         >
-          <img
-            className="image__profile"
-            style={{
-              width: "100%",
-              objectFit: "cover",
-            }}
-            srcSet={require("../../assets/img/fotoCv1crop.jpg")}
-            alt="Rodrigo Rabellino profile"
-          />
-        </Box>
+          <Box
+            width="300px"
+            height="300px"
+            borderRadius="500px"
+            overflow="hidden"
+            display={mediaQuery600 ? "flex" : "none"}
+          >
+            <img
+              className="image__profile"
+              style={{
+                width: "100%",
+                objectFit: "cover",
+              }}
+              srcSet={require("../../assets/img/fotoCv1crop.jpg")}
+              alt="Rodrigo Rabellino profile"
+            />
+          </Box>
+        </Fade>
       </Container>
     </Box>
   );
