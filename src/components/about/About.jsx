@@ -19,7 +19,7 @@ import mongooseLogo from "../../assets/icons/mongoose.svg";
 import flutterLogo from "../../assets/icons/flutter.svg";
 import dartLogo from "../../assets/icons/dart.svg";
 import pythonLogo from "../../assets/icons/python2.svg";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const About = () => {
   const [value, setValue] = useState("1");

@@ -3,7 +3,6 @@ import {
   Typography,
   useMediaQuery,
   Container,
-  Grow,
   Fade,
   Slide,
 } from "@mui/material";
