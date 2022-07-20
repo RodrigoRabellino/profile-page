@@ -9,14 +9,14 @@ export const projects = [
   {
     name: "Guitarrero",
     image: require("../../assets/img/guitarrero-store.png"),
-    createdAt: "19/07/22",
+    createdAt: "19/06/22",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-front",
     liveDemo: "https://guitarrero.vercel.app/",
   },
   {
     name: "Guitarrero Admin",
     image: require("../../assets/img/guitarrero-admin.png"),
-    createdAt: "19/07/22",
+    createdAt: "19/06/22",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-admin",
     liveDemo: "https://guitarrero-admin.vercel.app/",
   },
@@ -25,6 +25,13 @@ export const projects = [
     image: require("../../assets/img/profilePage.png"),
     createdAt: "11/07/22",
     gitHubUrl: "https://github.com/RodrigoRabellino/profile-page",
+    liveDemo: "",
+  },
+  {
+    name: "Tic-Tac-Toe",
+    image: require("../../assets/img/tictactoe.png"),
+    createdAt: "20/07/22",
+    gitHubUrl: "https://github.com/RodrigoRabellino/tic-tac-toe",
     liveDemo: "",
   },
 ];
