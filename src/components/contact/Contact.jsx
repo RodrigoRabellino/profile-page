@@ -26,7 +26,6 @@ const Contact = () => {
 
   const onScrollPage = () => {
     if (isInViewport()) {
-      console.log(showContact);
       setShowContact(true);
     }
   };

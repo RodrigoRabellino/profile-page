@@ -41,7 +41,6 @@ const About = () => {
 
   const onScrollPage = () => {
     if (isInViewport()) {
-      console.log(showAbout);
       setShowAbout(true);
     }
   };
