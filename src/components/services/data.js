@@ -32,6 +32,6 @@ export const projects = [
     image: require("../../assets/img/tictactoe.png"),
     createdAt: "20/07/22",
     gitHubUrl: "https://github.com/RodrigoRabellino/tic-tac-toe",
-    liveDemo: "",
+    liveDemo: "https://tic-tac-toe-rr.vercel.app/",
   },
 ];
