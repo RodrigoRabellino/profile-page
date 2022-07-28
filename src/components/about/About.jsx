@@ -19,6 +19,7 @@ import mongooseLogo from "../../assets/icons/mongoose.svg";
 import flutterLogo from "../../assets/icons/flutter.svg";
 import dartLogo from "../../assets/icons/dart.svg";
 import pythonLogo from "../../assets/icons/python2.svg";
+import docker from "../../assets/icons/docker.svg";
 import { useState } from "react";
 
 const About = () => {
@@ -197,6 +198,10 @@ const MySkills = ({ itemStyle }) => {
 
 const Learning = ({ itemStyle }) => {
   const technologies = [
+    {
+      name: "Docker",
+      image: docker,
+    },
     {
       name: "R. Native",
       image: reactLogo,
