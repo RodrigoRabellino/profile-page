@@ -20,6 +20,7 @@ import flutterLogo from "../../assets/icons/flutter.svg";
 import dartLogo from "../../assets/icons/dart.svg";
 import pythonLogo from "../../assets/icons/python2.svg";
 import docker from "../../assets/icons/docker.svg";
+import vuejs from "../../assets/icons/vuejs.svg";
 import { useState } from "react";
 
 const About = () => {
@@ -198,6 +199,10 @@ const MySkills = ({ itemStyle }) => {
 
 const Learning = ({ itemStyle }) => {
   const technologies = [
+    {
+      name: "VueJS",
+      image: vuejs,
+    },
     {
       name: "Docker",
       image: docker,
