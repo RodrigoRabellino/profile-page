@@ -25,7 +25,7 @@ const MyProjects = () => {
           container
           spacing={2}
           mb="2rem"
-          justifyContent={mediaQuery600 ? "space-between" : "center"}
+          justifyContent={mediaQuery600 ? "center" : "center"}
         >
           {projects.map((project, i) => {
             return (
@@ -64,7 +64,7 @@ const MyProjects = () => {
                     subheader={
                       <>
                         <Typography variant="caption" color="CaptionText">
-                          {`Created At: ${project.createdAt}`}
+                          {project.desc}
                         </Typography>
                       </>
                     }
