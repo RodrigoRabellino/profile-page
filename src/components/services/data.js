@@ -55,6 +55,7 @@ export const projects = [
     liveDemo: "",
   },
 ];
+
 export const technologies = [
   {
     name: "React",

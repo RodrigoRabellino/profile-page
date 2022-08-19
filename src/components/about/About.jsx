@@ -59,7 +59,7 @@ const About = () => {
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <TabList onChange={handleChange} color="#3c4043">
               <Tab label="Spanish" value="1" />
-              <Tab label="English" value="2" disabled />
+              <Tab label="English" value="2" />
             </TabList>
           </Box>
           <TabPanel value="1">
@@ -88,7 +88,26 @@ const About = () => {
             </Grid>
           </TabPanel>
           <TabPanel value="2">
-            <Typography>Coming soon</Typography>
+            <Grid
+              container
+              spacing={2}
+              display="flex"
+              justifyContent="space-evenly"
+              pb="3rem"
+            >
+              <Grid item xs={12} md={6}>
+                <Typography maxWidth="65ch">
+                  My interest in technology begins in adolescence with the
+                  acquisition of the first PC at home. In the beginning it was
+                  all about hardware for me, a hobby that continues to this day.
+                  Studying PC repair, I discovered the world of programming of
+                  which I became passionate about.
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography maxWidth="65ch"></Typography>
+              </Grid>
+            </Grid>
           </TabPanel>
         </TabContext>
 
