@@ -56,7 +56,7 @@ const Header = () => {
             timeout={{ appear: 2000, enter: 2000, exit: 2000 }}
           >
             <Typography fontSize="20px" ml="3px">
-              Fullstack Dev | Actor
+              Fullstack Developer
             </Typography>
           </Slide>
         </Box>
