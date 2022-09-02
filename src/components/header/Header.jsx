@@ -78,7 +78,7 @@ const Header = () => {
                 width: "100%",
                 objectFit: "cover",
               }}
-              srcSet={require("../../assets/img/fotoCv1crop.jpg")}
+              srcSet={`${process.env.REACT_APP_SUPABASE_URL}/fotoCv1crop.jpg`}
               alt="Rodrigo Rabellino profile"
             />
           </Box>

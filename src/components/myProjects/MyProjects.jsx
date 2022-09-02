@@ -48,7 +48,7 @@ const MyProjects = () => {
                       borderRadius: "15px",
                       overflow: "hidden",
                     }}
-                    image={project.image}
+                    image={process.env.REACT_APP_SUPABASE_URL + project.image}
                   />
                   <CardHeader
                     sx={{ p: "0", px: "0" }}
