@@ -180,7 +180,7 @@ const NavBarItems = ({ direction, handleClose }) => {
         My Projects
       </Typography>
       <Typography
-        sx={{ ...styleLink }}
+        sx={styleLink}
         onClick={() => {
           if (direction === "column") handleClose();
           setTimeout(() => {

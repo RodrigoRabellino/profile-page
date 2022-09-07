@@ -18,6 +18,7 @@ export const projects = [
     desc: "Learning React, TMDB-Api",
     gitHubUrl: "https://github.com/RodrigoRabellino/hackflix",
     liveDemo: "https://hackflix-rabellino.netlify.app/",
+    type: "front",
   },
   {
     name: "Guitarrero",
@@ -25,6 +26,7 @@ export const projects = [
     desc: "Final Project in BootCamp",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-front",
     liveDemo: "https://guitarrero.vercel.app/",
+    type: "front",
   },
   {
     name: "Guitarrero Admin",
@@ -32,6 +34,7 @@ export const projects = [
     desc: "Final Project in BootCamp",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-admin",
     liveDemo: "https://guitarrero-admin.vercel.app/",
+    type: "front",
   },
   {
     name: "Guitarrero API",
@@ -39,6 +42,7 @@ export const projects = [
     desc: "Final Project API",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-api",
     liveDemo: "",
+    type: "back",
   },
   {
     name: "Profile Page",
@@ -46,6 +50,7 @@ export const projects = [
     desc: "My profile page",
     gitHubUrl: "https://github.com/RodrigoRabellino/profile-page",
     liveDemo: "",
+    type: "front",
   },
   {
     name: "Tic-Tac-Toe",
@@ -53,6 +58,7 @@ export const projects = [
     desc: "Classic game",
     gitHubUrl: "https://github.com/RodrigoRabellino/tic-tac-toe",
     liveDemo: "https://tic-tac-toe-rr.vercel.app/",
+    type: "front",
   },
   {
     name: "PokeApi",
@@ -60,6 +66,7 @@ export const projects = [
     desc: "Learning Vue",
     gitHubUrl: "https://github.com/RodrigoRabellino/poke-api-vue",
     liveDemo: "",
+    type: "front",
   },
 ];
 
