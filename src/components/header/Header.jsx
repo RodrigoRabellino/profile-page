@@ -7,6 +7,7 @@ import {
   Slide,
 } from "@mui/material";
 import { useEffect, useState } from "react";
+import wave from "../../assets/img/wave/waveHeader.svg";
 
 const Header = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
@@ -23,6 +24,19 @@ const Header = () => {
       height="400px"
       py="5rem"
       bgcolor="#e3ffe6"
+      sx={{
+        ":before": {
+          content: "''",
+          backgroundColor: "white",
+          backgroundImage: `url(${wave})`,
+          backgroundSize: "cover",
+          width: "100%",
+          height: "320px",
+          position: "absolute",
+          bottom: "-230px",
+          zIndex: "-1",
+        },
+      }}
     >
       <Container
         sx={{

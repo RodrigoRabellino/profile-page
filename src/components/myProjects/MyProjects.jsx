@@ -11,12 +11,18 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { projects } from "../services/data";
-
 const MyProjects = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
 
   return (
-    <Box sx={{ py: "5rem" }} id="myProjectSection">
+    <Box
+      label="este es el container"
+      sx={{
+        py: "5rem",
+        pt: "4rem",
+      }}
+      id="myProjectSection"
+    >
       <Container>
         <Typography variant="h4" sx={{ pb: "2rem" }} id="project__title">
           My Projects
