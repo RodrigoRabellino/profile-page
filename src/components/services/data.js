@@ -68,6 +68,22 @@ export const projects = [
     liveDemo: "",
     type: "front",
   },
+  {
+    name: "Make Tutorials front",
+    image: "/tutorials.png",
+    desc: "Learning Vue",
+    gitHubUrl: "https://github.com/RodrigoRabellino/sb-challenge-front",
+    liveDemo: "",
+    type: "back",
+  },
+  {
+    name: "Make Tutorials api",
+    image: "/tutorials.png",
+    desc: "Learning Vue",
+    gitHubUrl: "https://github.com/RodrigoRabellino/sb-challenge-api",
+    liveDemo: "",
+    type: "back",
+  },
 ];
 
 export const technologies = [
