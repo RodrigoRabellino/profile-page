@@ -10,6 +10,7 @@ import {
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { FileDownload } from "@mui/icons-material";
 import { technologies, learning } from "../services/data";
+import styles from "./about.module.css";
 
 import { useState } from "react";
 
@@ -44,82 +45,89 @@ const About = () => {
   };
 
   return (
-    <Box sx={{ background: "#e9d5d3", py: "5rem" }} id="myAboutSection">
-      <Container>
-        <Slide
-          in={showAbout}
-          direction="right"
-          timeout={{ appear: 900, enter: 900, exit: 900 }}
-        >
-          <Typography variant="h4" sx={{ pb: "2rem" }} id="title__about">
-            About me
-          </Typography>
-        </Slide>
-        <TabContext value={value}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList onChange={handleChange} color="#3c4043">
-              <Tab label="Spanish" value="1" />
-              <Tab label="English" value="2" />
-            </TabList>
-          </Box>
-          <TabPanel value="1">
-            <Grid
-              container
-              spacing={2}
-              display="flex"
-              justifyContent="space-evenly"
-              pb="3rem"
+    <section className={styles.section}>
+      <Box sx={{ background: "#e9d5d3", py: "5rem" }} id="myAboutSection">
+        <Container>
+          <Slide
+            in={showAbout}
+            direction="right"
+            timeout={{ appear: 900, enter: 900, exit: 900 }}
+          >
+            <Typography
+              zIndex="500"
+              variant="h4"
+              sx={{ pb: "2rem" }}
+              id="title__about"
             >
-              <Grid item xs={12} md={6}>
-                <Typography maxWidth="65ch">
-                  Mi interés por la tecnología comienza en la adolescencia con
-                  la adquisición de la primera PC en casa. En un principio fue
-                  con el hardware afición que continúa hasta el día de hoy.
-                  Estudiando reparación PC descubrí el mundo de la programación
-                  el cual me apasionó.
-                </Typography>
+              About me
+            </Typography>
+          </Slide>
+          <TabContext value={value}>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <TabList onChange={handleChange} color="#3c4043">
+                <Tab label="Spanish" value="1" />
+                <Tab label="English" value="2" />
+              </TabList>
+            </Box>
+            <TabPanel value="1">
+              <Grid
+                container
+                spacing={2}
+                display="flex"
+                justifyContent="space-evenly"
+                pb="3rem"
+              >
+                <Grid item xs={12} md={6}>
+                  <Typography maxWidth="65ch">
+                    Mi interés por la tecnología comienza en la adolescencia con
+                    la adquisición de la primera PC en casa. En un principio fue
+                    con el hardware afición que continúa hasta el día de hoy.
+                    Estudiando reparación PC descubrí el mundo de la
+                    programación el cual me apasionó.
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Typography maxWidth="65ch">
+                    También quiero destacar la actuación y la música como
+                    actividades que complementan mi vida.
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Typography maxWidth="65ch">
-                  También quiero destacar la actuación y la música como
-                  actividades que complementan mi vida.
-                </Typography>
+            </TabPanel>
+            <TabPanel value="2">
+              <Grid
+                container
+                spacing={2}
+                display="flex"
+                justifyContent="space-evenly"
+                pb="3rem"
+              >
+                <Grid item xs={12} md={6}>
+                  <Typography maxWidth="65ch">
+                    My interest in technology begins in adolescence with the
+                    acquisition of the first PC at home. In the beginning it was
+                    all about hardware for me, a hobby that continues to this
+                    day. Studying PC repair, I discovered the world of
+                    programming of which I became passionate about.
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Typography maxWidth="65ch"></Typography>
+                </Grid>
               </Grid>
-            </Grid>
-          </TabPanel>
-          <TabPanel value="2">
-            <Grid
-              container
-              spacing={2}
-              display="flex"
-              justifyContent="space-evenly"
-              pb="3rem"
-            >
-              <Grid item xs={12} md={6}>
-                <Typography maxWidth="65ch">
-                  My interest in technology begins in adolescence with the
-                  acquisition of the first PC at home. In the beginning it was
-                  all about hardware for me, a hobby that continues to this day.
-                  Studying PC repair, I discovered the world of programming of
-                  which I became passionate about.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Typography maxWidth="65ch"></Typography>
-              </Grid>
-            </Grid>
-          </TabPanel>
-        </TabContext>
+            </TabPanel>
+          </TabContext>
 
-        <Button variant="outlined" onClick={handleDownloadCv}>
-          <FileDownload />
-          Download CV
-        </Button>
+          <Button variant="outlined" onClick={handleDownloadCv}>
+            <FileDownload />
+            Download CV
+          </Button>
 
-        <TechnologiesList name="Skills" items={technologies} />
-        <TechnologiesList name="Learning/Interest" items={learning} />
-      </Container>
-    </Box>
+          <TechnologiesList name="Skills" items={technologies} />
+          <TechnologiesList name="Learning/Interest" items={learning} />
+        </Container>
+      </Box>
+    </section>
   );
 };
 

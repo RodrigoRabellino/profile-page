@@ -13,14 +13,6 @@ import mongooseIcon from "../../assets/icons/mongoose.svg";
 
 export const projects = [
   {
-    name: "HackFlix",
-    image: "/hackflix.png",
-    desc: "Learning React, TMDB-Api",
-    gitHubUrl: "https://github.com/RodrigoRabellino/hackflix",
-    liveDemo: "https://hackflix-rabellino.netlify.app/",
-    type: "front",
-  },
-  {
     name: "Guitarrero",
     image: "/guitarrero-store.png",
     desc: "Final Project in BootCamp",
@@ -43,6 +35,14 @@ export const projects = [
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-api",
     liveDemo: "",
     type: "back",
+  },
+  {
+    name: "HackFlix",
+    image: "/hackflix.png",
+    desc: "Learning React, TMDB-Api",
+    gitHubUrl: "https://github.com/RodrigoRabellino/hackflix",
+    liveDemo: "https://hackflix-rabellino.netlify.app/",
+    type: "front",
   },
   {
     name: "Profile Page",
@@ -74,12 +74,12 @@ export const projects = [
     desc: "Learning Vue",
     gitHubUrl: "https://github.com/RodrigoRabellino/sb-challenge-front",
     liveDemo: "",
-    type: "back",
+    type: "front",
   },
   {
     name: "Make Tutorials api",
     image: "/tutorials.png",
-    desc: "Learning Vue",
+    desc: "Learning docker",
     gitHubUrl: "https://github.com/RodrigoRabellino/sb-challenge-api",
     liveDemo: "",
     type: "back",
