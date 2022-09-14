@@ -46,7 +46,7 @@ const About = () => {
 
   return (
     <section className={styles.section}>
-      <Box sx={{ background: "#e9d5d3", py: "5rem" }} id="myAboutSection">
+      <Box sx={{ background: "#e9d5d3", py: "3rem" }} id="myAboutSection">
         <Container>
           <Slide
             in={showAbout}

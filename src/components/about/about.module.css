@@ -10,3 +10,15 @@
   z-index: -1;
   transform: rotate(180deg) translateY(315px);
 }
+.section::after {
+  content: "";
+  display: block;
+  background-image: url("../../assets/img/wave/waveAboutAfter.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  z-index: -1;
+  transform: translateY(-2px);
+}
