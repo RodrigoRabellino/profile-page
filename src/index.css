@@ -4,6 +4,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 html,
@@ -11,6 +13,10 @@ body,
 #root,
 .App {
   height: 100%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 code {
