@@ -50,7 +50,7 @@ const Contact = () => {
               icon={<LinkedIn />}
               value="/RodrigoRabellino"
               handleOnClick={() =>
-                window.open("https://github.com/RodrigoRabellino", "_blank")
+                window.open("https://www.linkedin.com/in/rodrigorabellino/", "_blank")
               }
             ></MyButtonOpen>
           </Grid>
@@ -60,7 +60,7 @@ const Contact = () => {
               value="/RodrigoRabellino"
               handleOnClick={() =>
                 window.open(
-                  "https://www.linkedin.com/in/rodrigorabellino/",
+                  "https://github.com/RodrigoRabellino",
                   "_blank"
                 )
               }

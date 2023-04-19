@@ -24,7 +24,7 @@ const About = () => {
 
   const isInViewport = () => {
     const div = document.getElementById("myAboutSection");
-    let distance = div.getBoundingClientRect();
+    let distance = div?.getBoundingClientRect() || null;
     return (
       distance.top <
         (window.innerHeight || document.documentElement.clientHeight) &&
@@ -139,6 +139,7 @@ const TechnologiesList = ({ items, name }) => {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    cursor: "default",
     transition: "0.2s",
     ":hover": {
       transition: "0.2s",

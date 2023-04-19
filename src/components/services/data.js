@@ -10,6 +10,7 @@ import jsIcon from "../../assets/icons/js.svg";
 import materialUiIcon from "../../assets/icons/material.svg";
 import nodeIcon from "../../assets/icons/node.svg";
 import mongooseIcon from "../../assets/icons/mongoose.svg";
+import javaIcon from "../../assets/icons/java.svg"
 
 export const projects = [
   {
@@ -118,6 +119,10 @@ export const technologies = [
   {
     name: "Mongoose",
     image: mongooseIcon,
+  },
+  {
+    name: "Java",
+    image: javaIcon,
   },
 ];
 
