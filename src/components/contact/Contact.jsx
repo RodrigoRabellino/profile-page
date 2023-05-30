@@ -106,6 +106,7 @@ const MyButtonCopy = ({ value, icon }) => {
   const handleCopy = () => {
     setCopy(true);
     navigator.clipboard.writeText(value);
+    navigator.vibrate(200, 100, 200);
     setTimeout(() => {
       setCopy(false);
     }, 1500);
