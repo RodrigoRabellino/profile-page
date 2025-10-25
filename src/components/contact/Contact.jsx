@@ -26,7 +26,6 @@ const Contact = () => {
 
   const onScrollPage = () => {
     if (isInViewport()) {
-      console.log(showContact);
       setShowContact(true);
     }
   };
@@ -51,7 +50,7 @@ const Contact = () => {
               icon={<LinkedIn />}
               value="/RodrigoRabellino"
               handleOnClick={() =>
-                window.open("https://github.com/RodrigoRabellino", "_blank")
+                window.open("https://www.linkedin.com/in/rodrigorabellino/", "_blank")
               }
             ></MyButtonOpen>
           </Grid>
@@ -61,7 +60,7 @@ const Contact = () => {
               value="/RodrigoRabellino"
               handleOnClick={() =>
                 window.open(
-                  "https://www.linkedin.com/in/rodrigorabellino/",
+                  "https://github.com/RodrigoRabellino",
                   "_blank"
                 )
               }
@@ -107,6 +106,7 @@ const MyButtonCopy = ({ value, icon }) => {
   const handleCopy = () => {
     setCopy(true);
     navigator.clipboard.writeText(value);
+    navigator.vibrate(200, 100, 200);
     setTimeout(() => {
       setCopy(false);
     }, 1500);

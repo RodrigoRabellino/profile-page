@@ -135,6 +135,29 @@ const MenuNavBar = () => {
 };
 
 const NavBarItems = ({ direction, handleClose }) => {
+  const styleLink = {
+    cursor: "pointer",
+    position: "relative",
+    textDecoration: " none",
+    ":before": {
+      content: "''",
+      position: "absolute",
+      width: "0px",
+      height: "2px",
+      borderRadius: "50px",
+      bottom: "0",
+      left: "0",
+      right: "0",
+      backgroundColor: "#3c4043",
+      transition: "width 0.6s cubic-bezier(0.25, 1, 0.5, 1)",
+    },
+    ":hover:before": {
+      left: "0",
+      right: "auto",
+      width: "100%",
+    },
+  };
+
   return (
     <Stack
       direction={direction}
@@ -144,7 +167,7 @@ const NavBarItems = ({ direction, handleClose }) => {
     >
       <Typography
         noWrap
-        sx={{ cursor: "pointer" }}
+        sx={styleLink}
         onClick={() => {
           if (direction === "column") handleClose();
           setTimeout(() => {
@@ -157,7 +180,7 @@ const NavBarItems = ({ direction, handleClose }) => {
         My Projects
       </Typography>
       <Typography
-        sx={{ cursor: "pointer" }}
+        sx={styleLink}
         onClick={() => {
           if (direction === "column") handleClose();
           setTimeout(() => {
@@ -170,7 +193,7 @@ const NavBarItems = ({ direction, handleClose }) => {
         About
       </Typography>
       <Typography
-        sx={{ cursor: "pointer" }}
+        sx={styleLink}
         onClick={() => {
           if (direction === "column") handleClose();
           setTimeout(() => {

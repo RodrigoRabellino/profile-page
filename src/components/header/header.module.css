@@ -1,0 +1,10 @@
+.section::after {
+  content: "";
+  display: block;
+  background-image: url("../../assets/img/wave/waveHeader.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 75%;
+  position: absolute;
+  z-index: -1;
+}
