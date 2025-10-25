@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import styles from "./header.module.css";
+import profilePhoto from "../../assets/img/photos/fotoCv1crop.jpg";
 
 const Header = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
@@ -86,7 +87,7 @@ const Header = () => {
                   width: "100%",
                   objectFit: "cover",
                 }}
-                srcSet={`${process.env.REACT_APP_SUPABASE_URL}/fotoCv1crop.jpg`}
+                src={profilePhoto}
                 alt="Rodrigo Rabellino profile"
               />
             </Box>

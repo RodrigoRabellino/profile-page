@@ -10,12 +10,21 @@ import jsIcon from "../../assets/icons/js.svg";
 import materialUiIcon from "../../assets/icons/material.svg";
 import nodeIcon from "../../assets/icons/node.svg";
 import mongooseIcon from "../../assets/icons/mongoose.svg";
-import javaIcon from "../../assets/icons/java.svg"
+import javaIcon from "../../assets/icons/java.svg";
+
+// Project images
+import guitarreroStoreImg from "../../assets/img/projects/guitarrero-store.png";
+import guitarreroAdminImg from "../../assets/img/projects/guitarrero-admin.png";
+import hackflixImg from "../../assets/img/projects/hackflix.png";
+import profilePageImg from "../../assets/img/projects/profilePage.png";
+import tictactoeImg from "../../assets/img/projects/tictactoe.png";
+import pokeImg from "../../assets/img/projects/poke.png";
+import tutorialsImg from "../../assets/img/projects/tutorials.png";
 
 export const projects = [
   {
     name: "Guitarrero",
-    image: "/guitarrero-store.png",
+    image: guitarreroStoreImg,
     desc: "Final Project in BootCamp",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-front",
     liveDemo: "https://guitarrero.vercel.app/",
@@ -23,7 +32,7 @@ export const projects = [
   },
   {
     name: "Guitarrero Admin",
-    image: "/guitarrero-admin.png",
+    image: guitarreroAdminImg,
     desc: "Final Project in BootCamp",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-admin",
     liveDemo: "https://guitarrero-admin.vercel.app/",
@@ -31,7 +40,7 @@ export const projects = [
   },
   {
     name: "Guitarrero API",
-    image: "/guitarrero-store.png",
+    image: guitarreroStoreImg,
     desc: "Final Project API",
     gitHubUrl: "https://github.com/RodrigoRabellino/e-commerce-api",
     liveDemo: "",
@@ -39,7 +48,7 @@ export const projects = [
   },
   {
     name: "HackFlix",
-    image: "/hackflix.png",
+    image: hackflixImg,
     desc: "Learning React, TMDB-Api",
     gitHubUrl: "https://github.com/RodrigoRabellino/hackflix",
     liveDemo: "https://hackflix-rabellino.netlify.app/",
@@ -47,7 +56,7 @@ export const projects = [
   },
   {
     name: "Profile Page",
-    image: "/profilePage.png",
+    image: profilePageImg,
     desc: "My profile page",
     gitHubUrl: "https://github.com/RodrigoRabellino/profile-page",
     liveDemo: "",
@@ -55,7 +64,7 @@ export const projects = [
   },
   {
     name: "Tic-Tac-Toe",
-    image: "/tictactoe.png",
+    image: tictactoeImg,
     desc: "Classic game",
     gitHubUrl: "https://github.com/RodrigoRabellino/tic-tac-toe",
     liveDemo: "https://tic-tac-toe-rr.vercel.app/",
@@ -63,7 +72,7 @@ export const projects = [
   },
   {
     name: "PokeApi",
-    image: "/poke.png",
+    image: pokeImg,
     desc: "Learning Vue",
     gitHubUrl: "https://github.com/RodrigoRabellino/poke-api-vue",
     liveDemo: "",
@@ -71,7 +80,7 @@ export const projects = [
   },
   {
     name: "Make Tutorials front",
-    image: "/tutorials.png",
+    image: tutorialsImg,
     desc: "Learning Vue",
     gitHubUrl: "https://github.com/RodrigoRabellino/sb-challenge-front",
     liveDemo: "",
@@ -79,7 +88,7 @@ export const projects = [
   },
   {
     name: "Make Tutorials api",
-    image: "/tutorials.png",
+    image: tutorialsImg,
     desc: "Learning docker",
     gitHubUrl: "https://github.com/RodrigoRabellino/sb-challenge-api",
     liveDemo: "",
