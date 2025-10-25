@@ -1,6 +1,6 @@
 import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import HomePage from "./components/homePage/HomePage";
+import Main from "./components/Main/MainPage";
 import { Box } from "@mui/material";
 
 function App() {
@@ -65,7 +65,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box className="App">
-        <HomePage />
+        <Main />
       </Box>
     </ThemeProvider>
   );
