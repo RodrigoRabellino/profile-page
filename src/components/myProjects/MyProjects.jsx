@@ -56,18 +56,21 @@ const MyProjects = () => {
               <Button
                 onClick={() => onChangeFilter("all")}
                 variant={filter === "all" ? "contained" : "outlined"}
+                disableRipple
               >
                 All
               </Button>
               <Button
                 onClick={() => onChangeFilter("front")}
                 variant={filter === "front" ? "contained" : "outlined"}
+                disableRipple
               >
                 Front
               </Button>
               <Button
                 onClick={() => onChangeFilter("back")}
                 variant={filter === "back" ? "contained" : "outlined"}
+                disableRipple
               >
                 Back
               </Button>
