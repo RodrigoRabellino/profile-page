@@ -20,16 +20,18 @@ function App() {
     components: {
       MuiButton: {
         styleOverrides: {
-          root: {
+          root: ({ ownerState }) => ({
             padding: "5px 10px 5px 10px",
             transition: "0.4s",
-            ":hover": {
-              transition: "0.4s",
-              borderRadius: "28px",
-              backgroundColor: "#3c4043",
-              color: "#e8f1ed",
-            },
-          },
+            ...(!ownerState.disableRipple && {
+              ":hover": {
+                transition: "0.4s",
+                borderRadius: "28px",
+                backgroundColor: "#3c4043",
+                color: "#e8f1ed",
+              },
+            }),
+          }),
         },
       },
       MuiPaper: {

@@ -15,6 +15,11 @@ const MyProjects = () => {
   const mediaQuery600 = useMediaQuery("(min-width:600px)");
   const [myProjects, setMyProjects] = useState([]);
   const [filter, setFilter] = useState("all");
+  const HOVER_STYLE = {"&:hover": {
+                    transition: "0.5s",
+                    backgroundColor: "#525557",
+                    color: "#e8f1ed",
+                  }}
 
   useEffect(() => {
     setMyProjects(projects);
@@ -56,19 +61,25 @@ const MyProjects = () => {
               <Button
                 onClick={() => onChangeFilter("all")}
                 variant={filter === "all" ? "contained" : "outlined"}
+                disableRipple
+                sx={HOVER_STYLE}
               >
                 All
               </Button>
               <Button
                 onClick={() => onChangeFilter("front")}
                 variant={filter === "front" ? "contained" : "outlined"}
+                disableRipple
+                sx={HOVER_STYLE}
               >
                 Front
               </Button>
               <Button
                 onClick={() => onChangeFilter("back")}
                 variant={filter === "back" ? "contained" : "outlined"}
-              >
+                disableRipple
+                sx={HOVER_STYLE}
+                    >
                 Back
               </Button>
             </ButtonGroup>
